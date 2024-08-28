@@ -8,7 +8,6 @@
 #include <iostream>
 
 /// Return the neighborhood of 'toConvolve'--centered at 'x', 'y'--convolved by 'kernel'.
-/// 'kernel' has dimensions > 1.
 template< typename Scalar >
 Scalar convolvedValue( 
 	const Greyscale< Scalar >& toConvolve, 
@@ -37,7 +36,7 @@ Scalar convolvedValue(
 	return sum / weightSum;
 }
 
-///	Return 'toConvolve' convolved by 'kernel'. All the values in 'kernel' must sum to 1.
+///	Return 'toConvolve' convolved by 'kernel'. 
 template< typename Scalar >
 Greyscale< Scalar > convolve( const Greyscale< Scalar >& toConvolve, const Greyscale< Scalar >& kernel )
 {
